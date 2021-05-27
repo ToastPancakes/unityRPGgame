@@ -10,9 +10,15 @@ public class Enemy_Projectile_Damage : MonoBehaviour
     public static int playerDamage = 1;
     private void Start()
     {
-        enemyStats = FindObjectOfType<Enemy_Creator_Script>().GetComponent<Enemy_Creator_Script>();
+        //enemyStats = FindObjectOfType<Enemy_Creator_Script>().GetComponent<Enemy_Creator_Script>();
         critNum = Random.Range(1, 100);
     }
+
+    public void Init(Enemy_Creator_Script enemyStats)
+    {
+        this.enemyStats = enemyStats;
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("collision");

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy_Ranged_Attack : MonoBehaviour
 {
+    [SerializeField] private Enemy_Creator_Script enemyStats;
+
     public float bulletSpeed = 10f;
     public GameObject bulletPrefab;
     private Vector3 target;
@@ -49,7 +51,8 @@ public class Enemy_Ranged_Attack : MonoBehaviour
 
     void fireBullet(Vector3 direction, float rotationZ)
     {
-        GameObject b = Instantiate(bulletPrefab) as GameObject;
+        GameObject b = Instantiate(bulletPrefab);
+        b.GetComponent<Enemy_Projectile_Damage>().Init(enemyStats);
         b.transform.position = transform.position;
         b.transform.right = direction;
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;

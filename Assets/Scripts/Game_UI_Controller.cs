@@ -23,7 +23,7 @@ public class Game_UI_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthBar.fillAmount = (float) healthAmount * Player_Health_Controller.playerHealth;
+        healthBar.fillAmount = healthAmount * Player_Health_Controller.playerHealth;
         manaBar.fillAmount = (float) manaAmount * Player_Mana_Controller.playerMana;
         currentLevel.text = "Level " + playerStats.level;
         xpBar.fillAmount = (float) Player_Level_Script.currentXP / Player_Level_Script.xpToLevel;

@@ -121,37 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &54830129 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5931399457545538367, guid: d961c3d51c88d0947ae9a6936d1338fb,
-    type: 3}
-  m_PrefabInstance: {fileID: 5931399457491316494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &54830134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5931399457545538360, guid: d961c3d51c88d0947ae9a6936d1338fb,
     type: 3}
   m_PrefabInstance: {fileID: 5931399457491316494}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &54830136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54830129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0d0916247708fa478eee464e9189bcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyStats: {fileID: 0}
-  bulletSpeed: 10
-  bulletPrefab: {fileID: 1827731770324602091, guid: b68d57bb0a243ca4a93a0c8fcd7b2c9c,
-    type: 3}
-  cooldownTimer: 0
-  player: {fileID: 456880850}
-  enemyLineOfSight: 7
 --- !u!1 &57466912
 GameObject:
   m_ObjectHideFlags: 0

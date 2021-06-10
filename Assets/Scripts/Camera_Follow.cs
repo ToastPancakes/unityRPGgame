@@ -19,8 +19,10 @@ public class Camera_Follow : MonoBehaviour
     {
         if (target != null)
         {
+            
             cameraPosition = new Vector3(target.position.x, target.position.y, -10f);
             transform.position = cameraPosition;
         }
     }
 }
+/*random comment /*

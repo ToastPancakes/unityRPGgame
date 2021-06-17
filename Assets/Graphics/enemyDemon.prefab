@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 0}
   playerStats: {fileID: 0}
+  heart: {fileID: 2068717587218273531, guid: 1c564982d6daef4478b0e9f30b8ff132, type: 3}
 --- !u!114 &3948599980747280477
 MonoBehaviour:
   m_ObjectHideFlags: 0

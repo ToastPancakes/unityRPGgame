@@ -8,6 +8,8 @@ public class Enemy_Collision : MonoBehaviour
     public Player_Stat_Script playerStats;
     int critNum = 0;
     int damage = 1;
+    int dropNum = 20;
+    public GameObject heart;
     public static int playerDamage = 1;
     private void Start()
     {
@@ -58,6 +60,12 @@ public class Enemy_Collision : MonoBehaviour
 
         if (enemyStats.health <= 0)
         {
+            dropNum = Random.Range(1, 101);
+            if(dropNum <= 50)
+            {
+               
+                Instantiate(heart, transform.position, Quaternion.identity );
+            }
             Player_Level_Script.currentXP += enemyStats.experiencePoints;
             Destroy(this.gameObject);
         }

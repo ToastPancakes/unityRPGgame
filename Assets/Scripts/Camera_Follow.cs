@@ -25,4 +25,3 @@ public class Camera_Follow : MonoBehaviour
         }
     }
 }
-/*random comment /*

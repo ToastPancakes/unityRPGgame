@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class Heart_Heal_Script : MonoBehaviour
 {
-    public int healAmount = 10;
+    public int healAmount;
+    public GameObject player;
+    Player_Stat_Script playerStats;
+    
 
+    private void Start()
+    {
+        playerStats = FindObjectOfType<Player_Stat_Script>().GetComponent<Player_Stat_Script>();
+        healAmount = playerStats.health / 4;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        Player_Health_Controller.playerHealth += healAmount;
-        Destroy(this.gameObject);
+        if (player.CompareTag("Player"))
+        {
+            Player_Health_Controller.playerHealth += healAmount;
+            Destroy(this.gameObject);
+        }
+       
     }
 
 }

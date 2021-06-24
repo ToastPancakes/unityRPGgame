@@ -122,3 +122,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 10
+  player: {fileID: 5595209301991219298, guid: 93c46eef36c60444c8540373fbc0e673, type: 3}

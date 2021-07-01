@@ -20,22 +20,14 @@ public class Enemy_AuNI_Script : MonoBehaviour
     {
         actionTimer -= Time.deltaTime;
         noActionTimer -= Time.deltaTime;
-        if (actionTimer == 0)
-        {
-            randomAction = 0;
-            noActionTimer = 2f;
-        }
-        if (noActionTimer == 0)
-        {
-            randomAction = Random.Range(1, 5);
-        }
-
+       
         if (randomAction == 1)
         {
             transform.position += transform.up * enemySpeed * Time.deltaTime;
             if(actionTimer <= 0)
             {
-                actionTimer = 3f;
+                actionTimer = 1.5f;
+                randomAction = Random.Range(1, 7);
             }
             
         }
@@ -44,7 +36,8 @@ public class Enemy_AuNI_Script : MonoBehaviour
             transform.position -= transform.up * enemySpeed * Time.deltaTime;
             if (actionTimer <= 0)
             {
-                actionTimer = 3f;
+                actionTimer = 1.5f;
+                randomAction = Random.Range(1, 7);
             }
         }
         if (randomAction == 3)
@@ -52,7 +45,8 @@ public class Enemy_AuNI_Script : MonoBehaviour
             transform.position += transform.right * enemySpeed * Time.deltaTime;
             if (actionTimer <= 0)
             {
-                actionTimer = 3f;
+                actionTimer = 1.5f;
+                randomAction = Random.Range(1, 7);
             };
         }
         if (randomAction == 4)
@@ -60,14 +54,16 @@ public class Enemy_AuNI_Script : MonoBehaviour
             transform.position -= transform.right * enemySpeed * Time.deltaTime;
             if (actionTimer <= 0)
             {
-                actionTimer = 3f;
+                actionTimer = 1.5f;
+                randomAction = Random.Range(1, 7);
             }
         }
-        if (randomAction == 5)
+        if (randomAction >= 5)
         {
             if (actionTimer <= 0)
             {
-                actionTimer = 3f;
+                actionTimer = 0.5f;
+                randomAction = Random.Range(1, 5);
             }
 
         }

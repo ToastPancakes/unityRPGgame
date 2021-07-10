@@ -16,7 +16,7 @@ public class Mana_Recovery_Script : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (player.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Player_Mana_Controller.playerMana += manaGainAmount;
             Destroy(this.gameObject);

@@ -16,7 +16,7 @@ public class Heart_Heal_Script : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (player.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Player_Health_Controller.playerHealth += healAmount;
             Destroy(this.gameObject);

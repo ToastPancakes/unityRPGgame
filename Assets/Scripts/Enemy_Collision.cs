@@ -12,12 +12,16 @@ public class Enemy_Collision : MonoBehaviour
     public GameObject heart;
     public static int playerDamage = 1;
     public int xpRandomness;
+    public int scoreIncrease;
+    Player_Score_Script playerScore;
     private void Start()
     {
         enemyStats = GetComponent<Enemy_Creator_Script>();
         playerStats = FindObjectOfType<Player_Stat_Script>().GetComponent<Player_Stat_Script>();
+        playerScore = FindObjectOfType<Player_Score_Script>().GetComponent<Player_Score_Script>();
         critNum = Random.Range(1, 100);
-        xpRandomness = Random.Range(15, 100);
+        xpRandomness = Random.Range(15, 30);
+        scoreIncrease = enemyStats.experiencePoints + xpRandomness;
         
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -33,6 +37,8 @@ public class Enemy_Collision : MonoBehaviour
             }
 
             Player_Health_Controller.playerHealth -= damage;
+            scoreIncrease = enemyStats.experiencePoints + xpRandomness;
+            xpRandomness = Random.Range(15, 30);
         }
 
     }
@@ -70,6 +76,7 @@ public class Enemy_Collision : MonoBehaviour
                 Instantiate(heart, transform.position, Quaternion.identity );
             }
             Player_Level_Script.currentXP += enemyStats.experiencePoints + xpRandomness;
+            playerScore.playerScore += scoreIncrease;
             Destroy(this.gameObject);
         }
     }

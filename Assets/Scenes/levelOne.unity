@@ -50815,6 +50815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScore: 0
   inGameScore: {fileID: 2070846220}
+  highScoreText: {fileID: 104304529}
 --- !u!4 &456880853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5595209301991219301, guid: 93c46eef36c60444c8540373fbc0e673,

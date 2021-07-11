@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -7404007812659405689}
   - component: {fileID: -4791046038155311316}
   - component: {fileID: -2105318558722752448}
+  - component: {fileID: -2945260587658742315}
   m_Layer: 0
   m_Name: purpleFireBall
   m_TagString: Untagged
@@ -145,3 +146,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 0}
   damage: 1
+--- !u!114 &-2945260587658742315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827731770324602091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a3c225fe8fa1544be0646f241ef694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -21,8 +21,8 @@ public class Enemy_Collision : MonoBehaviour
         playerScore = FindObjectOfType<Player_Score_Script>().GetComponent<Player_Score_Script>();
         critNum = Random.Range(1, 100);
         xpRandomness = Random.Range(15, 30);
-        scoreIncrease = enemyStats.experiencePoints + xpRandomness;
-        
+        scoreIncrease = enemyStats.experiencePoints;
+
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -37,7 +37,6 @@ public class Enemy_Collision : MonoBehaviour
             }
 
             Player_Health_Controller.playerHealth -= damage;
-            scoreIncrease = enemyStats.experiencePoints + xpRandomness;
             xpRandomness = Random.Range(15, 30);
         }
 

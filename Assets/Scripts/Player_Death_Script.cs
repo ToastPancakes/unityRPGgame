@@ -19,6 +19,10 @@ public class Player_Death_Script : MonoBehaviour
     {
         if(Player_Health_Controller.playerHealth <= 0)
         {
+            if (playerScore.playerScore > PlayerPrefs.GetInt("highscore"))
+            {
+                PlayerPrefs.SetInt("highscore", playerScore.playerScore);
+            }
             yourScore.text = "Your Score: " + playerScore.playerScore;
             gameOverPanel.active = true;
             Time.timeScale = 0;

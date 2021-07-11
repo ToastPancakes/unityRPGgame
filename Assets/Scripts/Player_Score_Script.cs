@@ -11,17 +11,12 @@ public class Player_Score_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("highscore");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerScore > PlayerPrefs.GetInt("highscore"))
-        {
-            PlayerPrefs.SetInt("highscore", playerScore);
-        }
         inGameScore.text = "Score: " + playerScore;
-        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("highscore");
     }
 }

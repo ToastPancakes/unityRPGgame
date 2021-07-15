@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1262697879387042267}
   - component: {fileID: -8762475692991264507}
   - component: {fileID: 1865627106988001250}
+  - component: {fileID: -3097661508447453982}
   m_Layer: 0
   m_Name: enemy_projectile
   m_TagString: Untagged
@@ -104,7 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &-8762475692991264507
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +116,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -352,3 +353,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 0}
+  damage: 1
+--- !u!114 &-3097661508447453982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153427507237650149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a3c225fe8fa1544be0646f241ef694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

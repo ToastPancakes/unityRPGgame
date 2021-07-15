@@ -19,7 +19,7 @@ public class Enemy_Projectile_Damage : MonoBehaviour
         this.enemyStats = enemyStats;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("collision");
         if (collision.gameObject.CompareTag("Player"))
@@ -39,6 +39,7 @@ public class Enemy_Projectile_Damage : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
 
 }
 

@@ -10,6 +10,8 @@ public class Player_Melee_Attack : MonoBehaviour
     public Transform attackLocation;
     public float attackRange = 0f;
     public LayerMask enemies;
+    public Animation swordSwing;
+    public Animator Animator;
     Player_Stat_Script Player_Stats;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class Player_Melee_Attack : MonoBehaviour
         {
             if (meleeCooldown <= 0f)
             {
+                Animator.Play("swordSwing");
                 Enemy_Collision.playerDamage = Player_Stats.strength;
                 Collider2D[] damage = Physics2D.OverlapCircleAll(attackLocation.position, attackRange, enemies);
                 meleeCooldown = 0.3f;

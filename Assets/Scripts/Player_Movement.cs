@@ -6,6 +6,7 @@ public class Player_Movement : MonoBehaviour
 {
     public float playerSpeed = 0.0001f;
     Animator animationPlayer;
+    public GameObject sword;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,7 @@ public class Player_Movement : MonoBehaviour
                 animationPlayer.enabled = true;
                 animationPlayer.SetInteger("walkState", 2);
                 transform.position += transform.right * playerSpeed * Time.deltaTime;
+                //sword.transform.position = new Vector3(transform.position.x + 0.2f, 0, 0);
             }
             else
             {

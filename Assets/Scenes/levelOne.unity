@@ -54791,6 +54791,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3948599981629468481}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1331873419 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5595209302014954195, guid: 93c46eef36c60444c8540373fbc0e673,
+    type: 3}
+  m_PrefabInstance: {fileID: 5595209302141735600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1380806083
 GameObject:
   m_ObjectHideFlags: 0
@@ -57356,6 +57362,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5595209301991219302, guid: 93c46eef36c60444c8540373fbc0e673,
+        type: 3}
+      propertyPath: sword
+      value: 
+      objectReference: {fileID: 1086778076}
     - target: {fileID: 5595209301991219306, guid: 93c46eef36c60444c8540373fbc0e673,
         type: 3}
       propertyPath: source
@@ -57371,6 +57382,11 @@ PrefabInstance:
       propertyPath: Animator
       value: 
       objectReference: {fileID: 1086778079}
+    - target: {fileID: 5595209301991219310, guid: 93c46eef36c60444c8540373fbc0e673,
+        type: 3}
+      propertyPath: attackLocation
+      value: 
+      objectReference: {fileID: 1331873419}
     - target: {fileID: 5595209301991219311, guid: 93c46eef36c60444c8540373fbc0e673,
         type: 3}
       propertyPath: gameOverPanel
@@ -57381,6 +57397,16 @@ PrefabInstance:
       propertyPath: yourScore
       value: 
       objectReference: {fileID: 907600725}
+    - target: {fileID: 5595209302014954195, guid: 93c46eef36c60444c8540373fbc0e673,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595209302014954195, guid: 93c46eef36c60444c8540373fbc0e673,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.063
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93c46eef36c60444c8540373fbc0e673, type: 3}
 --- !u!1001 &5931399457491316494

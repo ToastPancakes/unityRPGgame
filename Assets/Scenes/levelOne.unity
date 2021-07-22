@@ -52306,7 +52306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 697944824}
   playerStats: {fileID: 456880856}
-  heart: {fileID: 9211651471720965031, guid: dc49513c8ea5c9e4f99cb7c792fa2324, type: 3}
+  heart: {fileID: 2068717587218273531, guid: 1c564982d6daef4478b0e9f30b8ff132, type: 3}
   xpRandomness: 0
   scoreIncrease: 0
 --- !u!114 &697944824
@@ -52396,7 +52396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 714865467}
   playerStats: {fileID: 456880856}
-  heart: {fileID: 9211651471720965031, guid: dc49513c8ea5c9e4f99cb7c792fa2324, type: 3}
+  heart: {fileID: 2068717587218273531, guid: 1c564982d6daef4478b0e9f30b8ff132, type: 3}
   xpRandomness: 0
   scoreIncrease: 0
 --- !u!1 &740628657 stripped
@@ -53338,7 +53338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 1028639246}
   playerStats: {fileID: 456880856}
-  heart: {fileID: 9211651471720965031, guid: dc49513c8ea5c9e4f99cb7c792fa2324, type: 3}
+  heart: {fileID: 2068717587218273531, guid: 1c564982d6daef4478b0e9f30b8ff132, type: 3}
   xpRandomness: 0
   scoreIncrease: 0
 --- !u!114 &1028639248
@@ -53407,7 +53407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 1056221849}
   playerStats: {fileID: 456880856}
-  heart: {fileID: 9211651471720965031, guid: dc49513c8ea5c9e4f99cb7c792fa2324, type: 3}
+  heart: {fileID: 2068717587218273531, guid: 1c564982d6daef4478b0e9f30b8ff132, type: 3}
   xpRandomness: 0
   scoreIncrease: 0
 --- !u!114 &1056221851
@@ -53911,7 +53911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086778076}
   m_LocalRotation: {x: -0.08715578, y: 0.9961947, z: -0, w: 0}
-  m_LocalPosition: {x: -0.113, y: -0.056, z: 0}
+  m_LocalPosition: {x: -0.113, y: -0.056, z: -0.001}
   m_LocalScale: {x: 0.1, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 456880853}
@@ -54226,7 +54226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 1197234689}
   playerStats: {fileID: 456880856}
-  heart: {fileID: 9211651471720965031, guid: dc49513c8ea5c9e4f99cb7c792fa2324, type: 3}
+  heart: {fileID: 2068717587218273531, guid: 1c564982d6daef4478b0e9f30b8ff132, type: 3}
   xpRandomness: 0
   scoreIncrease: 0
 --- !u!114 &1197234691

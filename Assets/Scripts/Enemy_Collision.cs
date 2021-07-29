@@ -64,7 +64,6 @@ public class Enemy_Collision : MonoBehaviour
         }
 
         enemyStats.health -= playerDamage;
-        Debug.Log("Enemy Health = " + enemyStats.health);
 
         if (enemyStats.health <= 0)
         {

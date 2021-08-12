@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8974482612760992034}
   - component: {fileID: 9039600705799087136}
-  - component: {fileID: -261808049757374054}
   - component: {fileID: 3160466587476468266}
+  - component: {fileID: 2642370872429706338}
   m_Layer: 0
   m_Name: healthPotion
   m_TagString: Untagged
@@ -83,20 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-261808049757374054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9211651471720965031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430f90febcf99d144a8720f3864aceaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healAmount: 0
-  player: {fileID: 5595209301991219298, guid: 93c46eef36c60444c8540373fbc0e673, type: 3}
 --- !u!60 &3160466587476468266
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -136,3 +122,20 @@ PolygonCollider2D:
       - {x: -0.19947687, y: 0.4613019}
       - {x: -0.27050793, y: 0.37650988}
       - {x: -0.1951815, y: 0.29139534}
+--- !u!114 &2642370872429706338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211651471720965031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebe2fc1e1d6f254f82934760c1b4082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.1
+  interactionTransform: {fileID: 8974482612760992034}
+  player: {fileID: 5595209301991219301, guid: 93c46eef36c60444c8540373fbc0e673, type: 3}
+  hasInteracted: 0
+  item: {fileID: 11400000, guid: e3120beadd7eb9a41ae4bf70a177fbd1, type: 2}

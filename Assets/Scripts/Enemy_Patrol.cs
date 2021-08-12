@@ -33,7 +33,7 @@ public class Enemy_Patrol : MonoBehaviour
                 patrolPointPosition = 0;
             }
         }
-        Debug.Log("distance = " + Vector2.Distance(playerTransform.transform.position, transform.position));
+       // Debug.Log("distance = " + Vector2.Distance(playerTransform.transform.position, transform.position));
         if (Vector2.Distance(playerTransform.transform.position, transform.position) < enemyLineOfSight)
         {
             

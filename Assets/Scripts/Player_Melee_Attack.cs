@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 public class Player_Melee_Attack : MonoBehaviour
 {
     public GameObject meleeAttack;
@@ -22,6 +20,10 @@ public class Player_Melee_Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             if (meleeCooldown <= 0f)

@@ -67,6 +67,7 @@ public class Enemy_Collision : MonoBehaviour
 
         if (enemyStats.health <= 0)
         {
+            
             dropNum = Random.Range(1, 101);
             if(dropNum <= 50)
             {
@@ -75,6 +76,7 @@ public class Enemy_Collision : MonoBehaviour
             }
             Player_Level_Script.currentXP += enemyStats.experiencePoints + xpRandomness;
             playerScore.playerScore += scoreIncrease;
+            Player_Gold_Controller.playergold += enemyStats.gold;
             Destroy(this.gameObject);
         }
     }

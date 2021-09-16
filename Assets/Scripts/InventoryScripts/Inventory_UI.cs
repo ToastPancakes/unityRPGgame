@@ -7,6 +7,8 @@ public class Inventory_UI : MonoBehaviour
     Inventory inventory;
     public Transform itemsParent;
     public GameObject inventoryUI;
+    public GameObject equipmentUI;
+    public GameObject selectedEquipmentUI;
     Inventory_Slot[] slots;
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,8 @@ public class Inventory_UI : MonoBehaviour
         if(Input.GetButtonDown("Inventory"))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
+            equipmentUI.SetActive(!equipmentUI.activeSelf);
+            selectedEquipmentUI.SetActive(!selectedEquipmentUI.activeSelf);
         }
     }
 }

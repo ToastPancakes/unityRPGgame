@@ -12,6 +12,7 @@ public class Game_UI_Controller : MonoBehaviour
     public float manaAmount;
     public Text currentLevel;
     public Image xpBar;
+    public Text goldInt;
     
     void Start()
     {
@@ -23,6 +24,7 @@ public class Game_UI_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        goldInt.text = Player_Gold_Controller.playergold.ToString();
         healthBar.fillAmount = healthAmount * Player_Health_Controller.playerHealth;
         manaBar.fillAmount = (float) manaAmount * Player_Mana_Controller.playerMana;
         currentLevel.text = "Level " + playerStats.level;

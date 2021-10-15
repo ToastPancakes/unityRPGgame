@@ -4,14 +4,14 @@ using UnityEngine;
 
 /* Keep track of equipment. Has functions for adding and removing items. */
 
-public class EquipmentManager : MonoBehaviour
+public class Equipment_Manager : MonoBehaviour
 {
 
 	#region Singleton
 
 	public Equipment[] defaultEquipment;
 
-	public static EquipmentManager instance;
+	public static Equipment_Manager instance;
 	
 
 	void Awake()
@@ -21,30 +21,31 @@ public class EquipmentManager : MonoBehaviour
 
 	#endregion
 
-	Equipment[] currentEquipment;   // Items we currently have equipped
+	public Equipment[] currentEquipment;   // Items we currently have equipped
 
 	// Callback for when an item is equipped/unequipped
 	public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
 	public OnEquipmentChanged onEquipmentChanged;
 
 
-	Inventory inventory;    // Reference to our inventory
+	Equipment_Inventory inventory;    // Reference to our inventory
 
 	void Start()
 	{
-		inventory = Inventory.instance;     // Get a reference to our inventory
+		inventory = Equipment_Inventory.instance;     // Get a reference to our inventory
 
 		// Initialize currentEquipment based on number of equipment slots
 		int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
 		currentEquipment = new Equipment[numSlots];
 
-		EquipDefaults();
+		//EquipDefaults();
 	}
 
 	// Equip a new item
 	public void Equip(Equipment newItem)
 	{
 		// Find out what slot the item fits in
+		Debug.Log("equipment slot = " + (int)newItem.equipSlot);
 		int slotIndex = (int)newItem.equipSlot;
 
 		Equipment oldItem = Unequip(slotIndex);
@@ -57,6 +58,7 @@ public class EquipmentManager : MonoBehaviour
 
 		// Insert the item into the slot
 		currentEquipment[slotIndex] = newItem;
+		defaultEquipment = currentEquipment;
 	}
 
 	// Unequip an item with a particular index

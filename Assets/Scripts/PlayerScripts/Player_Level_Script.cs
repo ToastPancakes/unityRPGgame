@@ -27,13 +27,12 @@ public class Player_Level_Script : MonoBehaviour
             xpToLevel = (int)(xpToLevel * 1.5);
             levelUpText.enabled = true;
             cooldownTimer = 3;
-            playerStats.strength = playerStats.strength + playerStats.level + 2;
-            playerStats.dexterity = playerStats.dexterity + playerStats.level + 2;
-            playerStats.endurance = playerStats.endurance + playerStats.level + 2;
+            Player_Stat_Controller.strength = Player_Stat_Controller.strength + playerStats.level + 2;
+            Player_Stat_Controller.dexterity = Player_Stat_Controller.dexterity + playerStats.level + 2;
+            Player_Stat_Controller.endurance = Player_Stat_Controller.endurance + playerStats.level + 2;
             playerStats.manaPoints = playerStats.manaPoints + playerStats.level + 2;
-            playerStats.magicEndurance = playerStats.magicEndurance + playerStats.level + 2;
-            playerStats.manaPoints = playerStats.manaPoints + playerStats.level + 2;
-            playerStats.intelligence = playerStats.intelligence + playerStats.level + 2;
+            Player_Stat_Controller.magicEndurance = Player_Stat_Controller.magicEndurance + playerStats.level + 2;
+            Player_Stat_Controller.intelligence = Player_Stat_Controller.intelligence + playerStats.level + 2;
         }
         cooldownTimer -= Time.deltaTime;
         if (cooldownTimer <= 0)

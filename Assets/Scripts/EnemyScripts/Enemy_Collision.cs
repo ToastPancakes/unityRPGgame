@@ -26,10 +26,9 @@ public class Enemy_Collision : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collision");
         if (collision.gameObject.CompareTag("Player"))
         {
-            damage = enemyStats.strength;
+            damage = enemyStats.strength - Player_Stat_Controller.endurance / 5;
 
             if (critNum <= 5)
             {
@@ -45,7 +44,7 @@ public class Enemy_Collision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            playerDamage = playerStats.intelligence;
+            playerDamage = Player_Stat_Controller.intelligence;
 
 
             

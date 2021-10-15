@@ -12,7 +12,7 @@ public class Player_Health_Controller : MonoBehaviour
     {
         playerStats = FindObjectOfType<Player_Stat_Script>().GetComponent<Player_Stat_Script>();
         playerHealth = playerStats.health;
-        Debug.Log("Awake, " + playerHealth);
+        //Debug.Log("Awake, " + playerHealth);
     }
 
 }

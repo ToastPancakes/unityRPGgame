@@ -12,15 +12,17 @@ public class Equipment : Item
 
 	public EquipmentSlot equipSlot; // Slot to store equipment in
 
-	public int armorModifier;       // Increase/decrease in armor
-	public int damageModifier;      // Increase/decrease in damage
-
-	// When pressed in inventory
-	public override void Use()
+    public int endurance;
+    public int strength;
+    public int dexterity;
+    public int intelligence;
+    public int magicEndurance;
+    // When pressed in inventory
+    public override void Use()
 	{
 		base.Use();
-		EquipmentManager.instance.Equip(this);  // Equip it
-		RemoveFromInventory();                  // Remove it from inventory
+		Equipment_Manager.instance.Equip(this);  // Equip it
+		Equipment_Inventory.instance.Remove(this);
 	}
 
 }

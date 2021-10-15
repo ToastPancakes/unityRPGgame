@@ -30,7 +30,7 @@ public class Player_Melee_Attack : MonoBehaviour
             {
                 animationPlayer.enabled = true;
                 animationPlayer.SetInteger("walkState", 5); 
-                Enemy_Collision.playerDamage = Player_Stats.strength;
+                Enemy_Collision.playerDamage = Player_Stat_Controller.strength;
                 Collider2D[] damage = Physics2D.OverlapCircleAll(attackLocation.position, attackRange, enemies);
                 meleeCooldown = 0.3f;
                 meleeAttack.active = true;

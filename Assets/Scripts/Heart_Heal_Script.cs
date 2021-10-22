@@ -12,14 +12,22 @@ public class Heart_Heal_Script : MonoBehaviour
     private void Start()
     {
         playerStats = FindObjectOfType<Player_Stat_Script>().GetComponent<Player_Stat_Script>();
-        healAmount = playerStats.health / 4;
+        healAmount = playerStats.health / 5;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player_Health_Controller.playerHealth += healAmount;
-            Destroy(this.gameObject);
+            if (Player_Health_Controller.playerHealth <= playerStats.health)
+            {
+                Player_Health_Controller.playerHealth += healAmount;
+                if (Player_Health_Controller.playerHealth > playerStats.health)
+                {
+                    Player_Health_Controller.playerHealth = playerStats.health;
+                }
+                Destroy(this.gameObject);
+            }
+            
         }
        
     }

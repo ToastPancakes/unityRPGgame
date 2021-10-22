@@ -13,7 +13,10 @@ public class Game_UI_Controller : MonoBehaviour
     public Text currentLevel;
     public Image xpBar;
     public Text goldInt;
-    
+    public Text healthText;
+    public Text manaText;
+    public Text xpText;
+
     void Start()
     {
         playerStats = FindObjectOfType<Player_Stat_Script>().GetComponent<Player_Stat_Script>();
@@ -29,6 +32,9 @@ public class Game_UI_Controller : MonoBehaviour
         manaBar.fillAmount = (float) manaAmount * Player_Mana_Controller.playerMana;
         currentLevel.text = "Level " + playerStats.level;
         xpBar.fillAmount = (float) Player_Level_Script.currentXP / Player_Level_Script.xpToLevel;
+        healthText.text = Player_Health_Controller.playerHealth + "/" + playerStats.health;
+        manaText.text = Player_Mana_Controller.playerMana + "/" + playerStats.manaPoints;
+        xpText.text = Player_Level_Script.currentXP + "/" + Player_Level_Script.xpToLevel;
         // Debug.Log("xpBar fill amount = " + xpBar.fillAmount + " current xp = " + Player_Level_Script.currentXP + " xp to level = " + Player_Level_Script.xpToLevel); 
     }
 }

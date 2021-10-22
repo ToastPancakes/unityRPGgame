@@ -30,6 +30,7 @@ public class Player_Level_Script : MonoBehaviour
             Player_Stat_Controller.strength = Player_Stat_Controller.strength + playerStats.level + 2;
             Player_Stat_Controller.dexterity = Player_Stat_Controller.dexterity + playerStats.level + 2;
             Player_Stat_Controller.endurance = Player_Stat_Controller.endurance + playerStats.level + 2;
+            playerStats.health = playerStats.health + playerStats.level + 2;
             playerStats.manaPoints = playerStats.manaPoints + playerStats.level + 2;
             Player_Stat_Controller.magicEndurance = Player_Stat_Controller.magicEndurance + playerStats.level + 2;
             Player_Stat_Controller.intelligence = Player_Stat_Controller.intelligence + playerStats.level + 2;

@@ -10,16 +10,20 @@ public class Health_Potion : Item
     Player_Stat_Script playerStats;
 
 
-    private void Start()
+    void Start()
     {
         Debug.Log("start is being called");
-        playerStats = FindObjectOfType<Player_Stat_Script>().GetComponent<Player_Stat_Script>();
-        healAmount = playerStats.health / 4;
     }
     public override void Use()
     {
+        playerStats = FindObjectOfType<Player_Stat_Script>().GetComponent<Player_Stat_Script>();
+        healAmount = playerStats.health / 5;
         base.Use();
         Player_Health_Controller.playerHealth += healAmount;
         RemoveFromInventory();
+        if (Player_Health_Controller.playerHealth > playerStats.health)
+        {
+            Player_Health_Controller.playerHealth = playerStats.health;
+        }
     }
 }

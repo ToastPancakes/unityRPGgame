@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6165106134740916613}
   - component: {fileID: 3107939793100261833}
-  - component: {fileID: 8741433526972547624}
   - component: {fileID: 252656127598317540}
+  - component: {fileID: -6495498663941469630}
   m_Layer: 0
   m_Name: manaPotion
   m_TagString: Untagged
@@ -83,20 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8741433526972547624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4894418556040336718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b20643c3645e274799705a78b96ac4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manaGainAmount: 0
-  player: {fileID: 5595209301991219298, guid: 93c46eef36c60444c8540373fbc0e673, type: 3}
 --- !u!60 &252656127598317540
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -140,3 +126,21 @@ PolygonCollider2D:
       - {x: -0.1464912, y: 0.46393397}
       - {x: -0.16538519, y: 0.4273221}
       - {x: -0.2478595, y: 0.41782236}
+--- !u!114 &-6495498663941469630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894418556040336718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebe2fc1e1d6f254f82934760c1b4082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.5
+  interactionTransform: {fileID: 6165106134740916613}
+  player: {fileID: 0}
+  playerTransform: {fileID: 0}
+  hasInteracted: 0
+  item: {fileID: 11400000, guid: 09478d89add4eba42ad59b2b2c5d44b7, type: 2}

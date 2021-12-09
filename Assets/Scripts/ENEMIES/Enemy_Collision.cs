@@ -30,6 +30,10 @@ public class Enemy_Collision : MonoBehaviour
         {
             damage = enemyStats.strength - Player_Stat_Controller.endurance / 5;
 
+            if (damage < 0)
+            {
+                damage = 0;
+            }
             if (critNum <= 5)
             {
                 damage *= 2;

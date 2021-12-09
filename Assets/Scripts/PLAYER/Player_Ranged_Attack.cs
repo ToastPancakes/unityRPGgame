@@ -12,6 +12,7 @@ public class Player_Ranged_Attack : MonoBehaviour
     Player_Stat_Script Player_Stats;
     public AudioClip sound;
     public AudioSource source;
+    public int abilityCost = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,13 +33,13 @@ public class Player_Ranged_Attack : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         difference.Normalize();
 
-        if (Input.GetKey(KeyCode.Space) && cooldownTimer <= 0 && Player_Mana_Controller.playerMana > 0) 
+        if (Input.GetKey(KeyCode.Space) && cooldownTimer <= 0 && Player_Mana_Controller.playerMana >= abilityCost) 
         {
 
             fireBullet(difference, rotationZ);
             cooldownTimer = 0.5f;
             manaRegenTime = 5f;
-            Player_Mana_Controller.playerMana -= 5;
+            Player_Mana_Controller.playerMana -= abilityCost;
             PlaySound("magicAttack");
         }
 

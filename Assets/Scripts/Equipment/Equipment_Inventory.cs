@@ -27,7 +27,7 @@ public class Equipment_Inventory : MonoBehaviour
 	public delegate void OnItemChanged();
 	public OnItemChanged onItemChangedCallback;
 
-	public int space = 18;  // Amount of slots in inventory
+	public int space = 15;  // Amount of slots in inventory
 
 	// Current list of items in inventory
 	public List<Equipment> items = new List<Equipment>();

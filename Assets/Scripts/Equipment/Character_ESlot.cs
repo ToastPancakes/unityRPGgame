@@ -28,13 +28,13 @@ public class Character_ESlot : MonoBehaviour
 
     public void OnAddEquipment()
     {
-        Debug.Log("player strength = " + Player_Stat_Controller.strength);
+        Debug.Log("player endurance = " + Player_Stat_Controller.endurance);
         Player_Stat_Controller.endurance += item.endurance;
         Player_Stat_Controller.strength += item.strength;
         Player_Stat_Controller.intelligence += item.intelligence;
         Player_Stat_Controller.dexterity += item.dexterity;
         Player_Stat_Controller.magicEndurance += item.magicEndurance;
-        Debug.Log("player strength = " + Player_Stat_Controller.strength);
+        Debug.Log("player endurance = " + Player_Stat_Controller.endurance);
     }
 
     public void OnRemoveEquipment()

@@ -25,7 +25,11 @@ public class Enemy_Projectile_Damage : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             critNum = Random.Range(1, 100);
-            damage = enemyStats.dexterity;
+            damage = enemyStats.dexterity - Player_Stat_Controller.magicEndurance;
+            if (damage < 0)
+            {
+                damage = 0;
+            }
 
             Debug.Log("damage = " + damage);
             Debug.Log("enemy stats dex = " + enemyStats.dexterity);
@@ -39,7 +43,5 @@ public class Enemy_Projectile_Damage : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
-
 }
 

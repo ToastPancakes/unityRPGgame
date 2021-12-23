@@ -32,6 +32,7 @@ public class Enemy_Melee_Script : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position,player.transform.position, enemySpeed * Time.deltaTime);
           
         }
+
         if ((Vector2.Distance(player.transform.position, transform.position) < attackingRange))
         {
             damage = (int)enemyStats.strength - Player_Stat_Controller.endurance; 
@@ -46,6 +47,7 @@ public class Enemy_Melee_Script : MonoBehaviour
                 meleeCooldown = cooldown;
                 for (int i = 0; i < playersCollided.Length; i++)
                 {
+                    Debug.Log("cooldown = " + meleeCooldown);
                     if (critnum < 11)
                     {
 
@@ -57,5 +59,14 @@ public class Enemy_Melee_Script : MonoBehaviour
         }
 
         meleeCooldown -= Time.deltaTime;
-    } 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            chaseRange = Vector2.Distance(player.transform.position, transform.position) + 3;
+            Debug.Log("chaseRange = " + chaseRange);
+        }
+    }
 }

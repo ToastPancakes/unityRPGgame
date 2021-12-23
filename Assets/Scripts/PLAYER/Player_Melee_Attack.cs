@@ -28,7 +28,7 @@ public class Player_Melee_Attack : MonoBehaviour
         {
             if (meleeCooldown <= 0f)
             {
-                animationPlayer.enabled = true;
+                animationPlayer.enabled = false;
                 animationPlayer.SetInteger("walkState", 5); 
                 Enemy_Collision.playerDamage = Player_Stat_Controller.strength;
                 Collider2D[] damage = Physics2D.OverlapCircleAll(attackLocation.position, attackRange, enemies);

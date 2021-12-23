@@ -8,12 +8,9 @@ public class ManaPotion : Item
     public int manaGainAmount;
     public GameObject player;
     Player_Stat_Script playerStats;
+    public int cost = 50;
 
 
-    void Start()
-    {
-        Debug.Log("start is being called");
-    }
     public override void Use()
     {
         playerStats = FindObjectOfType<Player_Stat_Script>().GetComponent<Player_Stat_Script>();

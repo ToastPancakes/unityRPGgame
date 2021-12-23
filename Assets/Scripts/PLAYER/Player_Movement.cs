@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
-    public float playerSpeed = 0.0001f;
+    public float playerSpeed = 0.000001f;
     Animator animationPlayer;
     public GameObject sword;
+    public float horizontalAxis;
+    public float verticalAxis;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,45 +18,16 @@ public class Player_Movement : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if(!Player_Melee_Attack.isAttacking)
-        {
-            if (Input.GetKey(KeyCode.W))
-            {
-                animationPlayer.enabled = true;
-                animationPlayer.SetInteger("walkState", 1);
-                transform.position += transform.up * playerSpeed * Time.deltaTime;
-            }
+        horizontalAxis = Input.GetAxis("Horizontal");
+        verticalAxis = Input.GetAxis("Vertical");
 
-            else if (Input.GetKey(KeyCode.A))
-            {
-                animationPlayer.enabled = true;
-                animationPlayer.SetInteger("walkState", 4);
-                transform.position += -transform.right * playerSpeed * Time.deltaTime;
-            }
-
-            else if (Input.GetKey(KeyCode.S))
-            {
-                animationPlayer.enabled = true;
-                animationPlayer.SetInteger("walkState", 3);
-                transform.position += -transform.up * playerSpeed * Time.deltaTime;
-            }
-
-            else if (Input.GetKey(KeyCode.D))
-            {
-                animationPlayer.enabled = true;
-                animationPlayer.SetInteger("walkState", 2);
-                transform.position += transform.right * playerSpeed * Time.deltaTime;
-                //sword.transform.position = new Vector3(transform.position.x + 0.2f, 0, 0);
-            }
-            else
-            {
-                animationPlayer.enabled = false;
-            }
-        }
-       
+        transform.Translate(transform.right * horizontalAxis * Time.deltaTime * playerSpeed);
+        transform.Translate(transform.up * verticalAxis * Time.deltaTime * playerSpeed);
     }
 
 }
+
+
           

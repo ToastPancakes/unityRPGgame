@@ -8,7 +8,7 @@ public class Health_Potion : Item
     public int healAmount;
     public GameObject player;
     Player_Stat_Script playerStats;
-
+    public int cost = 100;
 
     void Start()
     {

@@ -12,6 +12,7 @@ public class Menu_UI_Controller : MonoBehaviour
     {
         Time.timeScale = 1;
         Player_Health_Controller.playerHealth = 100;
+        Player_Level_Script.xpToLevel = 100;
         SceneManager.LoadScene("levelOne");
 
     }

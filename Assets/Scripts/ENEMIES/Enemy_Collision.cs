@@ -26,7 +26,8 @@ public class Enemy_Collision : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+       
+        /*if (collision.gameObject.CompareTag("Player"))
         {
             damage = enemyStats.strength - Player_Stat_Controller.endurance / 5;
 
@@ -41,7 +42,7 @@ public class Enemy_Collision : MonoBehaviour
 
             Player_Health_Controller.playerHealth -= damage;
             xpRandomness = Random.Range(15, 30);
-        }
+        }*/
 
     }
     void OnTriggerEnter2D(Collider2D collision)

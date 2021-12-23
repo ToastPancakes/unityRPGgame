@@ -12,6 +12,8 @@ public class Enemy_Ranged_Attack : MonoBehaviour
     public float cooldownTimer = 0f;
     public GameObject player;
     public float enemyLineOfSight = 7;
+    public float enemySpeed = 2;
+    public bool moving;
     ///public AudioClip sound;
     ///public AudioSource source;
     // Start is called before the first frame update
@@ -45,6 +47,16 @@ public class Enemy_Ranged_Attack : MonoBehaviour
 
         cooldownTimer -= Time.deltaTime;
        
+        if(moving)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySpeed * Time.deltaTime);
+            
+            if (Vector2.Distance(player.transform.position, transform.position) < enemyLineOfSight)
+            {
+                moving = false;
+            }
+        }
+
     }
 
 
@@ -59,4 +71,14 @@ public class Enemy_Ranged_Attack : MonoBehaviour
         Destroy(b.gameObject, 2);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Bullet"))
+        {
+            if (Vector2.Distance(player.transform.position, transform.position) > enemyLineOfSight)
+            {
+                moving = true;
+            }
+        }
+    }
 }
